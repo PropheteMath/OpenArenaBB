@@ -1,5 +1,5 @@
 # OpenArenaBB
-OpenArena for Blackberry
+OpenArena for BB 10
 
 How ?
 
