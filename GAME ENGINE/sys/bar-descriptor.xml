@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--
+
+   Copyright (c) 2011-2014 BlackBerry Limited.
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+
+-->
+<qnx xmlns="http://www.qnx.com/schemas/application/1.0">
+
+<!-- BlackBerry® 10 application descriptor file.
+
+    Specifies parameters for identifying, installing, and launching native applications on BlackBerry® 10 OS.
+-->
+
+    <!-- A universally unique application identifier. Must be unique across all BlackBerry applications.
+         Using a reverse DNS-style name as the id is recommended. (Eg. com.example.ExampleApplication.) Required. -->
+    <id>OpenArena</id>
+    <permission>access_internet</permission>
+    <permission>use_gamepad</permission>
+    <asset path="assets">./baseoa/</asset>
+    <asset path="icon.png">icon.png</asset>
+    <asset path="assets/OAIcon.png">OAIcon.png</asset>
+    <asset path="assets/720.png">720.png</asset>
+    <asset path="assets/1440.png">1440.png</asset>
+    <asset path="assets/720w.png">720w.png</asset>
+    <asset path="assets/1024.png">1024.png</asset>
+    <asset path="assets/1024h.png">1024h.png</asset>
+    <configuration name="Device-Debug">
+       <platformArchitecture>armle-v7</platformArchitecture>
+       <asset path="Device-Debug/sys" entry="true" type="Qnx/Elf">sys</asset>
+       <asset path="${workspace_loc:/SDL12/Device-Debug/libSDL12.so}" type="Qnx/Elf">lib/libSDL12.so</asset>
+       <asset path="${workspace_loc:/TouchControlOverlay/Device-Debug/libTouchControlOverlay.so}" type="Qnx/Elf">lib/libTouchControlOverlay.so</asset>
+       <asset path="${workspace_loc:/botlib/Device-Debug/libbotlib.so}" type="Qnx/Elf">lib/libbotlib.so</asset>
+       <asset path="${workspace_loc:/cgame/Device-Debug/libcgame.so}" type="Qnx/Elf">lib/libcgame.so</asset>
+       <asset path="${workspace_loc:/client/Device-Debug/libclient.so}" type="Qnx/Elf">lib/libclient.so</asset>
+       <asset path="${workspace_loc:/game/Device-Debug/libgame.so}" type="Qnx/Elf">lib/libgame.so</asset>
+       <asset path="${workspace_loc:/libspeex/Device-Debug/liblibspeex.so}" type="Qnx/Elf">lib/liblibspeex.so</asset>
+       <asset path="${workspace_loc:/q3_ui/Device-Debug/libq3_ui.so}" type="Qnx/Elf">lib/libq3_ui.so</asset>
+       <asset path="${workspace_loc:/qcommon/Device-Debug/libqcommon.so}" type="Qnx/Elf">lib/libqcommon.so</asset>
+       <asset path="${workspace_loc:/renderer/Device-Debug/librenderer.so}" type="Qnx/Elf">lib/librenderer.so</asset>
+       <asset path="${workspace_loc:/server/Device-Debug/libserver.so}" type="Qnx/Elf">lib/libserver.so</asset>
+       <asset path="${workspace_loc:/ui_/Device-Debug/libui_.so}" type="Qnx/Elf">lib/libui_.so</asset>
+       <asset path="${workspace_loc:/jpeg/Device-Debug/libjpeg.so}" type="Qnx/Elf">lib/libjpeg.so</asset>
+       <asset path="${workspace_loc:/ogg/Device-Debug/libogg.so}" type="Qnx/Elf">lib/libogg.so</asset>
+    </configuration>
+    <configuration name="Device-Release">
+       <platformArchitecture>armle-v7</platformArchitecture>
+       <asset path="Device-Release/sys" entry="true" type="Qnx/Elf">sys</asset>
+       <asset path="${workspace_loc:/SDL12/Device-Release/libSDL12.so}" type="Qnx/Elf">lib/libSDL12.so</asset>
+       <asset path="${workspace_loc:/TouchControlOverlay/Device-Release/libTouchControlOverlay.so}" type="Qnx/Elf">lib/libTouchControlOverlay.so</asset>
+       <asset path="${workspace_loc:/botlib/Device-Release/libbotlib.so}" type="Qnx/Elf">lib/libbotlib.so</asset>
+       <asset path="${workspace_loc:/cgame/Device-Release/libcgame.so}" type="Qnx/Elf">lib/libcgame.so</asset>
+       <asset path="${workspace_loc:/client/Device-Release/libclient.so}" type="Qnx/Elf">lib/libclient.so</asset>
+       <asset path="${workspace_loc:/game/Device-Release/libgame.so}" type="Qnx/Elf">lib/libgame.so</asset>
+       <asset path="${workspace_loc:/libspeex/Device-Release/liblibspeex.so}" type="Qnx/Elf">lib/liblibspeex.so</asset>
+       <asset path="${workspace_loc:/q3_ui/Device-Release/libq3_ui.so}" type="Qnx/Elf">lib/libq3_ui.so</asset>
+       <asset path="${workspace_loc:/qcommon/Device-Release/libqcommon.so}" type="Qnx/Elf">lib/libqcommon.so</asset>
+       <asset path="${workspace_loc:/renderer/Device-Release/librenderer.so}" type="Qnx/Elf">lib/librenderer.so</asset>
+       <asset path="${workspace_loc:/server/Device-Release/libserver.so}" type="Qnx/Elf">lib/libserver.so</asset>
+       <asset path="${workspace_loc:/ui_/Device-Release/libui_.so}" type="Qnx/Elf">lib/libui_.so</asset>
+       <asset path="${workspace_loc:/jpeg/Device-Release/libjpeg.so}" type="Qnx/Elf">lib/libjpeg.so</asset>
+       <asset path="${workspace_loc:/ogg/Device-Release/libogg.so}" type="Qnx/Elf">lib/libogg.so</asset>
+    </configuration>
+
+    <!-- The name that is displayed in the BlackBerry application installer.
+         May have multiple values for each language. See samples or xsd schema file. Optional. -->
+
+    <!-- A string value of the format <0-999>.<0-999>.<0-999> that represents application version which can be used to check for application upgrade.
+         Values can also be 1-part or 2-part. It is not necessary to have a 3-part value.
+         An updated version of application must have a versionNumber value higher than the previous version. Required. -->
+    <versionNumber>1.0.3</versionNumber>
+
+    <!-- Fourth digit segment of the package version. First three segments are taken from the
+         <versionNumber> element.  Must be an integer from 0 to 2^16-1 -->
+    <buildId>1</buildId>
+    <packageLocale>en,fr,es,de,pt</packageLocale>
+
+    <!-- Description, displayed in the BlackBerry application installer.
+         May have multiple values for each language. See samples or xsd schema file. Optional. -->
+
+    <!--  Name of author which is used for signing. Must match the developer name of your developer certificate. -->
+    <name>
+       Open Arena
+       <text xml:lang="en">Open Arena</text>
+       <text xml:lang="fr">Open Arena</text>
+       <text xml:lang="es">Open Arena</text>
+       <text xml:lang="de">Open Arena</text>
+       <text xml:lang="pt">Open Arena</text>
+    </name>
+    <splashScreens>
+       <image>720.png</image>
+       <image>1440.png</image>
+       <image>720w.png</image>
+       <image>1024.png</image>
+       <image>1024h.png</image>
+    </splashScreens>
+    <category>core.games</category>
+    <description>
+       Open Arena
+       <text xml:lang="en">Welcome to the Arena, where high-ranking warriors are transformed into spineless mush. Abandoning every ounce of common sense and any trace of doubt, you lunge onto a stage of harrowing landscapes and veiled abysses. Your new environment rejects you with lava pits and atmospheric hazards as legions of foes surround you, testing the gut reaction that brought you here in the first place. Your new mantra: Fight or be finished.&#xD;
+&#xD;
+CONTROLS - Fire : red button - Jump : yellow button - Next Weapon : green button - Move : grey pad - Camera : anywhere else - Ingame menu &amp; menu back : swipe down the screen - Keyboard : press any key on BlackBerry Passport or swipe rigth to left the bottom of the screen on others devices to show the keyboard.&#xD;
+&#xD;
+CONTROLS - Fire : red button - Jump : yellow button - Next Weapon : green button - Move : grey pad - Camera : anywhere else - Ingame menu &amp; menu back : swipe down the screen - Keyboard : press any key on BlackBerry Passport or swipe right to left the bottom of the screen on others devices to show the keyboard.</text>
+       <text xml:lang="fr">Bienvenue dans l'ar&#xe8;ne o&#xf9; seul les meilleurs guerriers ont leur place. Les autres seront r&#xe9;duits en compote. Laissez derri&#xe8;re vos remords et vos sentiments : vous voici sur un terrain de chasse entour&#xe9; de puits de lave, d'abysses putrides, de terres d&#xe9;sol&#xe9;es et d'ennemis. Votre nouveau credo : combattre ou &#xea;tre &#xe9;limin&#xe9;.&#xD;
+&#xD;
+COMMANDES - Tirer : bouton rouge - Sauter : touche jaune - Changer d'arme : bouton vert - Bouger : pav&#xe9; gris - Cam&#xe9;ra : ailleurs - Menu : balayez de haut en bas l'&#xe9;cran - Clavier : appuyez sur une touche BlackBerry passeport ou glisser de droite &#xe0; gauche en bas de l'&#xe9;cran sur les autres pour afficher le clavier.</text>
+       <text xml:lang="es">Bienvenido a la Arena, donde guerreros de &#xe9;lite son transformados en papilla. Abandonando cualquier atisbo de sentido com&#xfa;n y cualquier rastro de duda, te adentras en un escenario de horrores y abismos oscuros. Tu nuevo entorno te recibe con pozos de lava y peligros atmosf&#xe9;ricos al mismo tiempo que eres rodeado por legiones de enemigos, poniendo a prueba la habilidad que te trajo a este lugar. Tu nuevo mantra: Lucha o muere.</text>
+       <text xml:lang="de">Willkommen in der Arena, in der ruhmreiche K&#xe4;mpfer zu Blutbrei geschlagen werden. Jeglichen Vernunfteingaben trotzend st&#xfc;rzen Sie sich in eine grauenhafte Landschaft mit bodenlosen Abgr&#xfc;nden. Diese neue Umgebung hei&#xdf;t Sie nicht willkommen und begegnet Ihnen mit Lavastr&#xf6;men und atmosph&#xe4;rischen St&#xf6;rungen und Legionen feindlicher Kreaturen, die Ihre Reaktionen auf den Pr&#xfc;fstand stellen. Ihr neues Mantra lautet: K&#xe4;mpfe oder werde erledigt.</text>
+       <text xml:lang="pt">Bem-vindo &#xe0; Arena, onde guerreiros de topo s&#xe3;o transformados em papa sem espinhas. Abandonando cada grama de senso comum e qualquer vest&#xed;gio de d&#xfa;vida, tu investes num palco de paisagens pungentes e abismos encobertos. O teu novo ambiente rejeita-te com po&#xe7;os de lava e uma atmosfera de risco enquanto &#xe9;s cercado por legi&#xf5;es de inimigos, testando a coragem que te trouxe aqui em primeiro lugar. O teu novo mantra: Lutar ou ser eliminado.</text>
+    </description>
+    <authorId>gYAAgGxcy-Q-3yQZqqVmAprPX1E</authorId>
+    <author>Mathieu Monnier</author>
+
+    <!--  Unique author ID assigned by signing authority. Required if using debug tokens. -->
+    <!-- <authorId>ABC1234YjsnUk235h</authorId> -->
+
+    <initialWindow>
+        <systemChrome>none</systemChrome>
+        <autoOrients>true</autoOrients>
+    </initialWindow>
+
+    <!--  The icon for the application. -->
+    <icon>
+       <image>OAIcon.png</image>
+    </icon>
+
+    <!-- Ensure that shared libraries in the package are found at run-time. -->
+    <env var="LD_LIBRARY_PATH" value="app/native/lib"/>
+    <env var="CASCADES_THEME" value="default"/>
+
+</qnx>
